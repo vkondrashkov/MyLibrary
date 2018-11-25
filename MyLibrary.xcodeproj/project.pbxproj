@@ -15,6 +15,9 @@
 		D6C712AE21AB0EE800B53AD2 /* LibraryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712AD21AB0EE800B53AD2 /* LibraryCoordinator.swift */; };
 		D6C712B021AB0EF600B53AD2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712AF21AB0EF600B53AD2 /* LibraryViewController.swift */; };
 		D6C712B221AB0F1700B53AD2 /* LibraryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712B121AB0F1700B53AD2 /* LibraryPresenter.swift */; };
+		D6C712B521AB126E00B53AD2 /* CarouselViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712B421AB126D00B53AD2 /* CarouselViewCell.swift */; };
+		D6C712B821AB12F600B53AD2 /* LibraryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712B721AB12F600B53AD2 /* LibraryCard.swift */; };
+		D6C712BB21AB132500B53AD2 /* LibraryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712BA21AB132500B53AD2 /* LibraryDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		D6C712AD21AB0EE800B53AD2 /* LibraryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCoordinator.swift; sourceTree = "<group>"; };
 		D6C712AF21AB0EF600B53AD2 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		D6C712B121AB0F1700B53AD2 /* LibraryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPresenter.swift; sourceTree = "<group>"; };
+		D6C712B421AB126D00B53AD2 /* CarouselViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewCell.swift; sourceTree = "<group>"; };
+		D6C712B721AB12F600B53AD2 /* LibraryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCard.swift; sourceTree = "<group>"; };
+		D6C712BA21AB132500B53AD2 /* LibraryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		D6C712A021AB079C00B53AD2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D6C712B621AB12E900B53AD2 /* Entities */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -109,8 +116,18 @@
 		D6C712B321AB0FAE00B53AD2 /* LibraryContentView */ = {
 			isa = PBXGroup;
 			children = (
+				D6C712B421AB126D00B53AD2 /* CarouselViewCell.swift */,
+				D6C712BA21AB132500B53AD2 /* LibraryDataSource.swift */,
 			);
 			path = LibraryContentView;
+			sourceTree = "<group>";
+		};
+		D6C712B621AB12E900B53AD2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D6C712B721AB12F600B53AD2 /* LibraryCard.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +201,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C712AE21AB0EE800B53AD2 /* LibraryCoordinator.swift in Sources */,
+				D6C712B521AB126E00B53AD2 /* CarouselViewCell.swift in Sources */,
 				D6C712B021AB0EF600B53AD2 /* LibraryViewController.swift in Sources */,
+				D6C712BB21AB132500B53AD2 /* LibraryDataSource.swift in Sources */,
+				D6C712B821AB12F600B53AD2 /* LibraryCard.swift in Sources */,
 				D6C712A221AB07BD00B53AD2 /* AppCoordinator.swift in Sources */,
 				D6C7128F21AB06C100B53AD2 /* ViewController.swift in Sources */,
 				D6C712B221AB0F1700B53AD2 /* LibraryPresenter.swift in Sources */,
