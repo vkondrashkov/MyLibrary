@@ -98,11 +98,19 @@
 		D6C712AC21AB0EC300B53AD2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D6C712B321AB0FAE00B53AD2 /* LibraryContentView */,
 				D6C712AD21AB0EE800B53AD2 /* LibraryCoordinator.swift */,
 				D6C712AF21AB0EF600B53AD2 /* LibraryViewController.swift */,
 				D6C712B121AB0F1700B53AD2 /* LibraryPresenter.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		D6C712B321AB0FAE00B53AD2 /* LibraryContentView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LibraryContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
