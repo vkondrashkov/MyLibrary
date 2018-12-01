@@ -64,6 +64,14 @@ class LibraryViewController: UIViewController, LibraryView {
         super.viewDidLayoutSubviews()
         gradientLayer.frame = view.bounds
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }
 
 extension LibraryViewController: UICollectionViewDelegateFlowLayout {

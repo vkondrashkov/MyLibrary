@@ -18,9 +18,10 @@ class LibraryCoordinator: Coordinator {
     
     func start() {
         view = LibraryViewController()
+        let navigationController = UINavigationController(rootViewController: view)
         let presenter = LibraryPresenterImplementation(view: view)
         view.presenter = presenter
-        window.rootViewController = view
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 }
