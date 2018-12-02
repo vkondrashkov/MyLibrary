@@ -48,13 +48,6 @@ extension SwipeableViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension SwipeableViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-        swipeableDataSource.items.remove(at: indexPath.row)
-        swipeableCollectionView.reloadData()
-    }
-}
-
 private typealias PrivateSwipeableViewController = SwipeableViewController
 private extension PrivateSwipeableViewController {
     func activateSwipeableCollectionViewConstraints(view: UIView) {
