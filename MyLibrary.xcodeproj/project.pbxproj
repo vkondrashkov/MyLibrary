@@ -20,6 +20,7 @@
 		D6C712B521AB126E00B53AD2 /* CarouselViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712B421AB126D00B53AD2 /* CarouselViewCell.swift */; };
 		D6C712B821AB12F600B53AD2 /* LibraryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712B721AB12F600B53AD2 /* LibraryCard.swift */; };
 		D6C712BB21AB132500B53AD2 /* LibraryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712BA21AB132500B53AD2 /* LibraryDataSource.swift */; };
+		D6DA3B9B21B3FD9600D801E2 /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3B9A21B3FD9600D801E2 /* UIViewController+DismissKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D6C712B421AB126D00B53AD2 /* CarouselViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewCell.swift; sourceTree = "<group>"; };
 		D6C712B721AB12F600B53AD2 /* LibraryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCard.swift; sourceTree = "<group>"; };
 		D6C712BA21AB132500B53AD2 /* LibraryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryDataSource.swift; sourceTree = "<group>"; };
+		D6DA3B9A21B3FD9600D801E2 /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		D6C7129E21AB078900B53AD2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D6DA3B9A21B3FD9600D801E2 /* UIViewController+DismissKeyboard.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				D6C712A221AB07BD00B53AD2 /* AppCoordinator.swift in Sources */,
 				D6C712B221AB0F1700B53AD2 /* LibraryPresenter.swift in Sources */,
 				D629DFF821B2D7F600D92C05 /* AuthorizationCoordinator.swift in Sources */,
+				D6DA3B9B21B3FD9600D801E2 /* UIViewController+DismissKeyboard.swift in Sources */,
 				D6C7128D21AB06C100B53AD2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

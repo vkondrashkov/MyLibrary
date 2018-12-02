@@ -72,6 +72,8 @@ class LibraryViewController: UIViewController, LibraryView {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 52.0 / 255.0, green: 73.0 / 255.0, blue: 94.0 / 255.0, alpha: 1)
     }
 }
 

@@ -22,6 +22,10 @@ class AuthorizationViewController: UIViewController, AuthorizationView {
     private var passwordField = UITextField(frame: .zero)
     private var submitButton = UIButton(frame: .zero)
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func loadView() {
         authorizationView.backgroundColor = UIColor(red: 44.0 / 255.0, green: 62.0 / 255.0, blue: 80.0 / 255.0, alpha: 1)
         
@@ -68,6 +72,7 @@ class AuthorizationViewController: UIViewController, AuthorizationView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -141,7 +146,8 @@ private extension PrivateAuthorizationViewController {
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: anchorView.bottomAnchor, constant: 20),
             view.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: superview.bottomAnchor)
             ])
     }
     
