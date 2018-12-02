@@ -33,6 +33,9 @@ class LibraryCoordinator: Coordinator {
         case 0:
             let authorizationCoordinator = AuthorizationCoordinator(navigationController: navigationController)
             authorizationCoordinator.start()
+        case 1:
+            let pullToRefreshCoordinator = PullToRefreshCoordinator(navigationController: navigationController)
+            pullToRefreshCoordinator.start()
         default:
             return
         }

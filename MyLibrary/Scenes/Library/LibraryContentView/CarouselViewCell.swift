@@ -35,7 +35,7 @@ class CarouselViewCell: UICollectionViewCell {
         activateBackgroundConstraints(view: background)
         
         titleLabel.font = .boldSystemFont(ofSize: 24)
-        titleLabel.textColor = .black
+        titleLabel.textColor = .white
         cardView.addSubview(titleLabel)
         activateTitleConstraints(view: titleLabel)
         
