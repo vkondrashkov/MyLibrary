@@ -13,6 +13,7 @@ protocol LibraryView: class {
 }
 
 class LibraryViewController: UIViewController, LibraryView {
+    var coordinator: LibraryCoordinator!
     var presenter: LibraryPresenter!
     
     private var libraryView = UIView(frame: .zero)
@@ -77,6 +78,13 @@ class LibraryViewController: UIViewController, LibraryView {
 extension LibraryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 300, height: 375)
+    }
+}
+
+extension LibraryViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CarouselViewCell else { return }
+        coordinator.startNewFlow(tag: cell.tag)
     }
 }
 

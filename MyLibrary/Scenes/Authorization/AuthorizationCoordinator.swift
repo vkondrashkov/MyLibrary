@@ -10,17 +10,16 @@ import UIKit
 
 class AuthorizationCoordinator: Coordinator {
     private var view: AuthorizationViewController!
-    private var window: UIWindow
+    private var navigationController: UINavigationController
     
-    init(window: UIWindow) {
-        self.window = window
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
     }
     
     func start() {
         view = AuthorizationViewController()
         let presenter = AuthorizationPresenterImplementation(view: view)
         view.presenter = presenter
-        window.rootViewController = view
-        window.makeKeyAndVisible()
+        navigationController.pushViewController(view, animated: true)
     }
 }

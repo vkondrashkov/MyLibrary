@@ -11,7 +11,6 @@
 		D629DFF621B2D7E200D92C05 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629DFF521B2D7E200D92C05 /* AuthorizationViewController.swift */; };
 		D629DFF821B2D7F600D92C05 /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629DFF721B2D7F600D92C05 /* AuthorizationCoordinator.swift */; };
 		D6C7128D21AB06C100B53AD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7128C21AB06C100B53AD2 /* AppDelegate.swift */; };
-		D6C7128F21AB06C100B53AD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7128E21AB06C100B53AD2 /* ViewController.swift */; };
 		D6C7129421AB06C600B53AD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C7129321AB06C600B53AD2 /* Assets.xcassets */; };
 		D6C7129721AB06C600B53AD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6C7129521AB06C600B53AD2 /* LaunchScreen.storyboard */; };
 		D6C712A221AB07BD00B53AD2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C712A121AB07BD00B53AD2 /* AppCoordinator.swift */; };
@@ -29,7 +28,6 @@
 		D629DFF721B2D7F600D92C05 /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
 		D6C7128921AB06C100B53AD2 /* MyLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C7128C21AB06C100B53AD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6C7128E21AB06C100B53AD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D6C7129321AB06C600B53AD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6C7129621AB06C600B53AD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6C7129821AB06C600B53AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 				D6C7129F21AB079600B53AD2 /* Scenes */,
 				D6C7129E21AB078900B53AD2 /* Utils */,
 				D6C7128C21AB06C100B53AD2 /* AppDelegate.swift */,
-				D6C7128E21AB06C100B53AD2 /* ViewController.swift */,
 				D6C7129321AB06C600B53AD2 /* Assets.xcassets */,
 				D6C7129521AB06C600B53AD2 /* LaunchScreen.storyboard */,
 				D6C7129821AB06C600B53AD2 /* Info.plist */,
@@ -225,7 +222,6 @@
 				D6C712BB21AB132500B53AD2 /* LibraryDataSource.swift in Sources */,
 				D6C712B821AB12F600B53AD2 /* LibraryCard.swift in Sources */,
 				D6C712A221AB07BD00B53AD2 /* AppCoordinator.swift in Sources */,
-				D6C7128F21AB06C100B53AD2 /* ViewController.swift in Sources */,
 				D6C712B221AB0F1700B53AD2 /* LibraryPresenter.swift in Sources */,
 				D629DFF821B2D7F600D92C05 /* AuthorizationCoordinator.swift in Sources */,
 				D6C7128D21AB06C100B53AD2 /* AppDelegate.swift in Sources */,

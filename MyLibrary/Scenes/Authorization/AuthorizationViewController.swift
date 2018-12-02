@@ -16,7 +16,6 @@ class AuthorizationViewController: UIViewController, AuthorizationView {
     var presenter: AuthorizationPresenter!
     
     private var authorizationView = UIView(frame: .zero)
-    private var gradientLayer = CAGradientLayer()
     private var containerView = UIView(frame: .zero)
     private var loginLabel = UILabel()
     private var usernameField = UITextField(frame: .zero)
@@ -24,13 +23,7 @@ class AuthorizationViewController: UIViewController, AuthorizationView {
     private var submitButton = UIButton(frame: .zero)
     
     override func loadView() {
-        authorizationView.backgroundColor = .clear
-        let colorTop = UIColor(red: 41.0 / 255.0, green: 128.0 / 255.0, blue: 185.0 / 255.0, alpha: 1).cgColor
-        let colorBottom = UIColor(red: 44.0 / 255.0, green: 62.0 / 255.0, blue: 80.0 / 255.0, alpha: 1).cgColor
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
-        authorizationView.layer.insertSublayer(gradientLayer, at: 0)
+        authorizationView.backgroundColor = UIColor(red: 44.0 / 255.0, green: 62.0 / 255.0, blue: 80.0 / 255.0, alpha: 1)
         
         loginLabel.text = "Login"
         loginLabel.textColor = .white
@@ -139,8 +132,8 @@ private extension PrivateAuthorizationViewController {
         guard let superview = view.superview else { return }
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 20),
             view.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
-            view.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
             view.leadingAnchor.constraint(greaterThanOrEqualTo: superview.leadingAnchor, constant: 20),
             view.trailingAnchor.constraint(greaterThanOrEqualTo: superview.trailingAnchor, constant: -20)
             ])
