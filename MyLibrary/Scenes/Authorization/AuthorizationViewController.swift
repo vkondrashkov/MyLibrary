@@ -72,13 +72,30 @@ class AuthorizationViewController: UIViewController, AuthorizationView {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        loginLabel.alpha = 0
+        usernameField.alpha = 0
+        passwordField.alpha = 0
+        submitButton.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            self.loginLabel.alpha = 1
+        }, completion: nil)
         
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveEaseOut, animations: {
+            self.usernameField.alpha = 1
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseOut, animations: {
+            self.passwordField.alpha = 1
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
+            self.submitButton.alpha = 1
+        }, completion: nil)
     }
     
     @objc func submitButtonDidPressed(sender: UIButton) {
