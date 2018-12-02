@@ -61,7 +61,7 @@ class PullToRefreshViewController: UIViewController, PullToRefreshView {
 
 extension PullToRefreshViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 70)
+        return CGSize(width: emojiCollectionView.bounds.width, height: 70)
     }
 }
 
@@ -74,8 +74,8 @@ private extension PrivatePullToRefreshViewController {
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: superview.topAnchor),
             view.bottomAnchor.constraint(equalTo: superview.bottomAnchor),
-            view.leadingAnchor.constraint(greaterThanOrEqualTo: superview.leadingAnchor, constant: 20),
-            view.trailingAnchor.constraint(greaterThanOrEqualTo: superview.trailingAnchor, constant: -20),
+            view.leadingAnchor.constraint(greaterThanOrEqualTo: superview.leadingAnchor),
+            view.trailingAnchor.constraint(greaterThanOrEqualTo: superview.trailingAnchor),
             view.widthAnchor.constraint(equalTo: superview.widthAnchor)
             ])
     }

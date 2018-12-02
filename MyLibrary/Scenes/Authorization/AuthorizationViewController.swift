@@ -29,15 +29,15 @@ class AuthorizationViewController: UIViewController, AuthorizationView {
     override func loadView() {
         authorizationView.backgroundColor = UIColor(red: 44.0 / 255.0, green: 62.0 / 255.0, blue: 80.0 / 255.0, alpha: 1)
         
-        loginLabel.text = "Login"
+        loginLabel.text = "Welcome!"
         loginLabel.textColor = .white
-        loginLabel.font = .boldSystemFont(ofSize: 24)
+        loginLabel.font = .boldSystemFont(ofSize: 34)
         loginLabel.textAlignment = .center
         containerView.addSubview(loginLabel)
         activateLoginLabelConstraints(view: loginLabel)
         
         usernameField.placeholder = "Username or email"
-        usernameField.font = .boldSystemFont(ofSize: 17)
+        usernameField.font = .boldSystemFont(ofSize: 20)
         usernameField.borderStyle = .roundedRect
         usernameField.autocorrectionType = .no
         usernameField.keyboardType = .emailAddress
@@ -47,7 +47,7 @@ class AuthorizationViewController: UIViewController, AuthorizationView {
         activateUsernameFieldConstraints(view: usernameField, anchorView: loginLabel)
         
         passwordField.placeholder = "Password"
-        passwordField.font = .boldSystemFont(ofSize: 17)
+        passwordField.font = .boldSystemFont(ofSize: 20)
         passwordField.borderStyle = .roundedRect
         passwordField.autocorrectionType = .no
         passwordField.keyboardType = .default
@@ -59,6 +59,7 @@ class AuthorizationViewController: UIViewController, AuthorizationView {
         
         submitButton.backgroundColor = UIColor(red: 155.0 / 255.0, green: 89.0 / 255.0, blue: 182.0 / 255.0, alpha: 1.0)
         submitButton.setTitle("Login", for: .normal)
+        submitButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
         submitButton.layer.cornerRadius = 5
         submitButton.addTarget(self, action: #selector(submitButtonDidPressed(sender:)), for: .touchUpInside)
         containerView.addSubview(submitButton)
@@ -126,7 +127,8 @@ private extension PrivateAuthorizationViewController {
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: anchorView.bottomAnchor, constant: 40),
             view.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            view.heightAnchor.constraint(equalToConstant: 35)
             ])
     }
     
@@ -136,7 +138,8 @@ private extension PrivateAuthorizationViewController {
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: anchorView.bottomAnchor, constant: 20),
             view.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            view.heightAnchor.constraint(equalToConstant: 35)
             ])
     }
     
@@ -145,9 +148,10 @@ private extension PrivateAuthorizationViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: anchorView.bottomAnchor, constant: 20),
-            view.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor),
-            view.bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+            view.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
+            view.bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+            view.heightAnchor.constraint(equalToConstant: 35),
+            view.widthAnchor.constraint(equalToConstant: 100)
             ])
     }
     
@@ -155,7 +159,7 @@ private extension PrivateAuthorizationViewController {
         guard let superview = view.superview else { return }
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            view.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: 20),
+            view.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
             view.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
             view.leadingAnchor.constraint(greaterThanOrEqualTo: superview.leadingAnchor, constant: 20),
             view.trailingAnchor.constraint(greaterThanOrEqualTo: superview.trailingAnchor, constant: -20)
