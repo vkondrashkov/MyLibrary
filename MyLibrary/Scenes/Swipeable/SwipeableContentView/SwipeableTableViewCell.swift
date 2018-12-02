@@ -8,24 +8,18 @@
 
 import UIKit
 
-class SwipeableCollectionViewCell: UICollectionViewCell {
+class SwipeableTableViewCell: UITableViewCell {
     private var descriptionLabel = UILabel(frame: .zero)
-    private var deleteLabel = UILabel(frame: .zero)
     
-    override init(frame: CGRect) {
-        super.init(frame: .zero)
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.backgroundColor = UIColor(red: 44.0 / 255.0, green: 62.0 / 255.0, blue: 80.0 / 255.0, alpha: 1)
-        backgroundColor = .red
-        
+        contentView.backgroundColor = .clear
         descriptionLabel.font = .boldSystemFont(ofSize: 24)
         descriptionLabel.textColor = .white
         contentView.addSubview(descriptionLabel)
         activateDescriptionLabelConstraints(view: descriptionLabel)
-        
-        deleteLabel.text = "Delete"
-        deleteLabel.textColor = .white
-        insertSubview(deleteLabel, belowSubview: contentView)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,15 +31,15 @@ class SwipeableCollectionViewCell: UICollectionViewCell {
     }
 }
 
-private typealias PrivateSwipeableCollectionViewCell = SwipeableCollectionViewCell
-private extension PrivateSwipeableCollectionViewCell {
+private typealias PrivateSwipeableTableViewCell = SwipeableTableViewCell
+private extension PrivateSwipeableTableViewCell {
     func activateDescriptionLabelConstraints(view: UIView) {
         guard let superview = view.superview else { return }
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalTo: superview.topAnchor),
-            view.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            view.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 10),
+            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -10),
             view.bottomAnchor.constraint(equalTo: superview.bottomAnchor)
             ])
     }

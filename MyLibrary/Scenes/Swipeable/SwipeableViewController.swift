@@ -16,23 +16,20 @@ class SwipeableViewController: UIViewController, SwipeableView {
     var presenter: SwipeablePresenter!
     
     private var swipeableView = UIView(frame: .zero)
-    private var swipeableCollectionLayout = UICollectionViewFlowLayout()
-    private lazy var swipeableCollectionView = UICollectionView(frame: .zero, collectionViewLayout: swipeableCollectionLayout)
+    private var swipeableTableView = UITableView(frame: .zero)
     private var swipeableDataSource = SwipeableDataSource()
     
     override func loadView() {
         swipeableView.backgroundColor = UIColor(red: 44.0 / 255.0, green: 62.0 / 255.0, blue: 80.0 / 255.0, alpha: 1)
         
-        swipeableCollectionLayout.scrollDirection = .vertical
-        swipeableCollectionLayout.sectionInset.left = 10
-        swipeableCollectionLayout.sectionInset.right = 10
         
-        swipeableCollectionView.dataSource = swipeableDataSource
-        swipeableCollectionView.delegate = self
-        swipeableCollectionView.register(SwipeableCollectionViewCell.self, forCellWithReuseIdentifier: "swipeableCell")
-        swipeableCollectionView.backgroundColor = .clear
-        swipeableView.addSubview(swipeableCollectionView)
-        activateSwipeableCollectionViewConstraints(view: swipeableCollectionView)
+        swipeableTableView.dataSource = swipeableDataSource
+        swipeableTableView.delegate = self
+        swipeableTableView.register(SwipeableTableViewCell.self, forCellReuseIdentifier: "swipeableCell")
+        swipeableTableView.backgroundColor = .clear
+        swipeableTableView.separatorStyle = .none
+        swipeableView.addSubview(swipeableTableView)
+        activateSwipeableTableViewConstraints(view: swipeableTableView)
         
         view = swipeableView
     }
@@ -40,17 +37,40 @@ class SwipeableViewController: UIViewController, SwipeableView {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }
 
-extension SwipeableViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: swipeableCollectionView.bounds.width - 20, height: 50)
+extension SwipeableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
+            self.swipeableDataSource.items.remove(at: index.row)
+            tableView.deleteRows(at: [index], with: .bottom)
+        }
+        delete.backgroundColor = UIColor(red: 231.0 / 255.0, green: 76.0 / 255.0, blue: 60.0 / 255.0, alpha: 1)
+        
+        let download = UITableViewRowAction(style: .normal, title: "Share") { action, index in
+            print("Share button tapped")
+        }
+        download.backgroundColor = UIColor(red: 243.0 / 255.0, green: 156.0 / 255.0, blue: 18.0 / 255.0, alpha: 1)
+        return [delete, download]
+    }
+    
+    func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+        return true
     }
 }
 
 private typealias PrivateSwipeableViewController = SwipeableViewController
 private extension PrivateSwipeableViewController {
-    func activateSwipeableCollectionViewConstraints(view: UIView) {
+    func activateSwipeableTableViewConstraints(view: UIView) {
         guard let superview = view.superview else { return }
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

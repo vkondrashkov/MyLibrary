@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SwipeableDataSource: NSObject, UICollectionViewDataSource {
+class SwipeableDataSource: NSObject, UITableViewDataSource {
     var items: [SwipeableNode] = [
         SwipeableNode(description: "First task"),
         SwipeableNode(description: "Some item placed here"),
@@ -23,14 +23,15 @@ class SwipeableDataSource: NSObject, UICollectionViewDataSource {
         SwipeableNode(description: "Final one")
     ]
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "swipeableCell", for: indexPath) as! SwipeableCollectionViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "swipeableCell") as! SwipeableTableViewCell
         cell.display(description: item.description)
+        
         
         return cell
     }
