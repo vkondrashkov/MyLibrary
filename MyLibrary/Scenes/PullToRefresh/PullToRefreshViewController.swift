@@ -25,7 +25,7 @@ class PullToRefreshViewController: UIViewController, PullToRefreshView {
     override func loadView() {
         pullToRefreshView.backgroundColor = UIColor(red: 44.0 / 255.0, green: 62.0 / 255.0, blue: 80.0 / 255.0, alpha: 1)
         
-        emojiCollectionLayout.scrollDirection = .horizontal
+        emojiCollectionLayout.scrollDirection = .vertical
         emojiCollectionView.dataSource = emojiDataSource
         emojiCollectionView.delegate = self
         emojiCollectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "emojiCell")
@@ -68,7 +68,6 @@ extension PullToRefreshViewController: UICollectionViewDelegateFlowLayout {
 private typealias PrivatePullToRefreshViewController = PullToRefreshViewController
 private extension PrivatePullToRefreshViewController {
     func activateEmojiCollectionViewConstraints(view: UIView) {
-        
         guard let superview = view.superview else { return }
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

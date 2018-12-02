@@ -13,8 +13,6 @@ class EmojiDataSource: NSObject, UICollectionViewDataSource {
         EmojiNode(emoji: "😘"),
         EmojiNode(emoji: "🙄"),
         EmojiNode(emoji: "😎"),
-        EmojiNode(emoji: "😀"),
-        EmojiNode(emoji: "😨"),
         EmojiNode(emoji: "😈")
     ]
     

@@ -27,6 +27,12 @@
 		D6DA3BA521B410B500D801E2 /* EmojiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BA421B410B500D801E2 /* EmojiDataSource.swift */; };
 		D6DA3BA721B410DD00D801E2 /* PullToRefreshCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BA621B410DD00D801E2 /* PullToRefreshCoordinator.swift */; };
 		D6DA3BA921B4121200D801E2 /* EmojiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BA821B4121200D801E2 /* EmojiNode.swift */; };
+		D6DA3BAD21B42EBF00D801E2 /* SwipeablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BAC21B42EBF00D801E2 /* SwipeablePresenter.swift */; };
+		D6DA3BAF21B42EC900D801E2 /* SwipeableCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BAE21B42EC900D801E2 /* SwipeableCoordinator.swift */; };
+		D6DA3BB121B42EDF00D801E2 /* SwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BB021B42EDF00D801E2 /* SwipeableViewController.swift */; };
+		D6DA3BB321B42EF900D801E2 /* SwipeableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BB221B42EF900D801E2 /* SwipeableCollectionViewCell.swift */; };
+		D6DA3BB521B42F0600D801E2 /* SwipeableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BB421B42F0600D801E2 /* SwipeableDataSource.swift */; };
+		D6DA3BB721B4301F00D801E2 /* SwipeableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA3BB621B4301F00D801E2 /* SwipeableNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		D6DA3BA421B410B500D801E2 /* EmojiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDataSource.swift; sourceTree = "<group>"; };
 		D6DA3BA621B410DD00D801E2 /* PullToRefreshCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshCoordinator.swift; sourceTree = "<group>"; };
 		D6DA3BA821B4121200D801E2 /* EmojiNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiNode.swift; sourceTree = "<group>"; };
+		D6DA3BAC21B42EBF00D801E2 /* SwipeablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeablePresenter.swift; sourceTree = "<group>"; };
+		D6DA3BAE21B42EC900D801E2 /* SwipeableCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCoordinator.swift; sourceTree = "<group>"; };
+		D6DA3BB021B42EDF00D801E2 /* SwipeableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableViewController.swift; sourceTree = "<group>"; };
+		D6DA3BB221B42EF900D801E2 /* SwipeableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6DA3BB421B42F0600D801E2 /* SwipeableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableDataSource.swift; sourceTree = "<group>"; };
+		D6DA3BB621B4301F00D801E2 /* SwipeableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,7 @@
 		D6C7129F21AB079600B53AD2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D6DA3BAA21B42E8800D801E2 /* Swipeable */,
 				D6DA3B9C21B4104800D801E2 /* PullToRefresh */,
 				D629DFF121B2D76C00D92C05 /* Authorization */,
 				D6C712AC21AB0EC300B53AD2 /* Library */,
@@ -157,6 +170,7 @@
 			children = (
 				D6C712B721AB12F600B53AD2 /* LibraryCard.swift */,
 				D6DA3BA821B4121200D801E2 /* EmojiNode.swift */,
+				D6DA3BB621B4301F00D801E2 /* SwipeableNode.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -179,6 +193,26 @@
 				D6DA3BA421B410B500D801E2 /* EmojiDataSource.swift */,
 			);
 			path = PullToRefreshContentView;
+			sourceTree = "<group>";
+		};
+		D6DA3BAA21B42E8800D801E2 /* Swipeable */ = {
+			isa = PBXGroup;
+			children = (
+				D6DA3BAB21B42EB000D801E2 /* SwipeableContentView */,
+				D6DA3BAC21B42EBF00D801E2 /* SwipeablePresenter.swift */,
+				D6DA3BAE21B42EC900D801E2 /* SwipeableCoordinator.swift */,
+				D6DA3BB021B42EDF00D801E2 /* SwipeableViewController.swift */,
+			);
+			path = Swipeable;
+			sourceTree = "<group>";
+		};
+		D6DA3BAB21B42EB000D801E2 /* SwipeableContentView */ = {
+			isa = PBXGroup;
+			children = (
+				D6DA3BB221B42EF900D801E2 /* SwipeableCollectionViewCell.swift */,
+				D6DA3BB421B42F0600D801E2 /* SwipeableDataSource.swift */,
+			);
+			path = SwipeableContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,21 +286,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				D629DFF621B2D7E200D92C05 /* AuthorizationViewController.swift in Sources */,
+				D6DA3BAF21B42EC900D801E2 /* SwipeableCoordinator.swift in Sources */,
 				D6C712AE21AB0EE800B53AD2 /* LibraryCoordinator.swift in Sources */,
 				D6C712B521AB126E00B53AD2 /* CarouselViewCell.swift in Sources */,
 				D6DA3B9E21B4106600D801E2 /* PullToRefreshPresenter.swift in Sources */,
 				D6DA3BA921B4121200D801E2 /* EmojiNode.swift in Sources */,
+				D6DA3BB121B42EDF00D801E2 /* SwipeableViewController.swift in Sources */,
 				D629DFF421B2D7CB00D92C05 /* AuthorizationPresenter.swift in Sources */,
+				D6DA3BB721B4301F00D801E2 /* SwipeableNode.swift in Sources */,
 				D6C712B021AB0EF600B53AD2 /* LibraryViewController.swift in Sources */,
 				D6DA3BA021B4107400D801E2 /* PullToRefreshViewController.swift in Sources */,
 				D6DA3BA321B410A600D801E2 /* EmojiCollectionViewCell.swift in Sources */,
 				D6C712BB21AB132500B53AD2 /* LibraryDataSource.swift in Sources */,
 				D6C712B821AB12F600B53AD2 /* LibraryCard.swift in Sources */,
 				D6C712A221AB07BD00B53AD2 /* AppCoordinator.swift in Sources */,
+				D6DA3BAD21B42EBF00D801E2 /* SwipeablePresenter.swift in Sources */,
 				D6C712B221AB0F1700B53AD2 /* LibraryPresenter.swift in Sources */,
+				D6DA3BB521B42F0600D801E2 /* SwipeableDataSource.swift in Sources */,
 				D629DFF821B2D7F600D92C05 /* AuthorizationCoordinator.swift in Sources */,
 				D6DA3B9B21B3FD9600D801E2 /* UIViewController+DismissKeyboard.swift in Sources */,
 				D6C7128D21AB06C100B53AD2 /* AppDelegate.swift in Sources */,
+				D6DA3BB321B42EF900D801E2 /* SwipeableCollectionViewCell.swift in Sources */,
 				D6DA3BA521B410B500D801E2 /* EmojiDataSource.swift in Sources */,
 				D6DA3BA721B410DD00D801E2 /* PullToRefreshCoordinator.swift in Sources */,
 			);

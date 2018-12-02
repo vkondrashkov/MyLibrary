@@ -27,7 +27,8 @@ class PullToRefreshPresenterImplementation: PullToRefreshPresenter {
             EmojiNode(emoji: "😄"),
             EmojiNode(emoji: "😅"),
             EmojiNode(emoji: "☺️"),
-            EmojiNode(emoji: "😜")
+            EmojiNode(emoji: "😜"),
+            EmojiNode(emoji: "🙂")
         ]
         view?.display(emojiList: newEmojiList)
         view?.endRefreshing()

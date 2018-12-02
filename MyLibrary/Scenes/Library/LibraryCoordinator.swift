@@ -36,6 +36,9 @@ class LibraryCoordinator: Coordinator {
         case 1:
             let pullToRefreshCoordinator = PullToRefreshCoordinator(navigationController: navigationController)
             pullToRefreshCoordinator.start()
+        case 2:
+            let swipeableCoordinator = SwipeableCoordinator(navigationController: navigationController)
+            swipeableCoordinator.start()
         default:
             return
         }
