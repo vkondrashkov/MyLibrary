@@ -56,15 +56,27 @@ extension SwipeableViewController: UITableViewDelegate {
         }
         delete.backgroundColor = UIColor(red: 231.0 / 255.0, green: 76.0 / 255.0, blue: 60.0 / 255.0, alpha: 1)
         
-        let download = UITableViewRowAction(style: .normal, title: "Share") { action, index in
-            print("Share button tapped")
+        let share = UITableViewRowAction(style: .normal, title: "Share") { action, index in
+            let items: [Any] = ["GitHub repository: ", URL(string: "https://github.com/vkondrashkov/MyLibrary") as Any]
+            let shareActivity = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            self.present(shareActivity, animated: true, completion: nil)
         }
-        download.backgroundColor = UIColor(red: 243.0 / 255.0, green: 156.0 / 255.0, blue: 18.0 / 255.0, alpha: 1)
-        return [delete, download]
+        share.backgroundColor = UIColor(red: 243.0 / 255.0, green: 156.0 / 255.0, blue: 18.0 / 255.0, alpha: 1)
+        return [delete, share]
     }
     
     func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
         return true
+    }
+}
+
+extension SwipeableViewController: UIActivityItemSource {
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        return "This is my library app"
+    }
+    
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return "This is my library app"
     }
 }
 
