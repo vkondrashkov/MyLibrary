@@ -10,12 +10,10 @@ import UIKit
 
 class LibraryDataSource: NSObject, UICollectionViewDataSource {
     private var items: [LibraryCard] = [
-        LibraryCard(title: "Технологии", description: "Ностальгия. Вспоминаем старые игры на компе", background: .cyan),
-        LibraryCard(title: "Авто", description: "Разбираем ДТП с гибелью покупателя \"омывайки\"", background: .orange),
-        LibraryCard(title: "Люди", description: "\"Не крали и не обманывали\"", background: UIColor.yellow),
-        LibraryCard(title: "Технологии", description: "Как вулкан оставил землю без лета", background: .green),
-        LibraryCard(title: "Недвижимость", description: "Комаровка днем и ночью. Фоторепортаж", background: .brown),
-        LibraryCard(title: "Люди", description: "У Минска новый мэр", background: .purple)
+        LibraryCard(title: "Login", description: "Animated authorization screen.", background: UIColor(red: 155.0 / 255.0, green: 89.0 / 255.0, blue: 182.0 / 255.0, alpha: 1.0)),
+        LibraryCard(title: "PullToRefresh", description: "PullToRefresh implementation for UICollectionView.", background: UIColor(red: 192.0 / 255.0, green: 57.0 / 255.0, blue: 43.0 / 255.0, alpha: 1.0)),
+        LibraryCard(title: "Swipeable", description: "Implementation for swiping tableview's cells.", background: UIColor(red: 22.0 / 255.0, green: 160.0 / 255.0, blue: 133.0 / 255.0, alpha: 1.0)),
+        LibraryCard(title: "Title", description: "Just template. Additional card in carousel view.", background: .gray)
     ]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -30,6 +28,7 @@ class LibraryDataSource: NSObject, UICollectionViewDataSource {
         let item = items[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CarouselViewCell
         cell.display(card: item)
+        cell.tag = indexPath.row
         
         return cell
     }
